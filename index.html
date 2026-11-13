@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Wunderwerk Digital GbR","url":"https://wunderwerk-digital.com","email":"hallo@wunderwerk-digital.com","address":{"@type":"PostalAddress","streetAddress":"Dorfstraße 11k","postalCode":"14554","addressLocality":"Seddiner See","addressRegion":"Brandenburg","addressCountry":"DE"}}
+{"@context":"https://schema.org","@type":"Organization","name":"Wunderwerk Digital GbR","url":"https://wunderwerk-digital.com","email":"kontakt@wunderwerk-digital.com","address":{"@type":"PostalAddress","streetAddress":"Dorfstraße 11k","postalCode":"14554","addressLocality":"Seddiner See","addressRegion":"Brandenburg","addressCountry":"DE"}}
 </script>
 <style>
 /* Layout: eine Werkstatt am See – helle Seefläche, Kiefergrün als Band, Sand für Ideen, Hahnenrot nur für Aktionen */
@@ -284,7 +284,7 @@ textarea{min-height:120px;resize:vertical}
 .splash h3{font-size:1.6rem}
 .contact{margin-top:30px;display:flex;flex-direction:column;gap:10px}
 .mailrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.mailrow code{font-family:var(--f-mono);font-size:.95rem;background:var(--surface);padding:10px 14px;border-radius:10px;border:1px solid var(--line);user-select:all;word-break:break-all}
+.mailrow a{text-decoration:underline;text-underline-offset:3px;color:var(--ink);font-family:var(--f-mono);font-size:.95rem;background:var(--surface);padding:10px 14px;border-radius:10px;border:1px solid var(--line);user-select:all;word-break:break-all}
 .mailrow button{font:600 .9rem/1 var(--f-body);padding:11px 14px;border-radius:10px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
 @media (max-width:860px){.lab{grid-template-columns:1fr}}
 @media (max-width:520px){.row2{grid-template-columns:1fr}}
@@ -580,7 +580,7 @@ footer .claim{margin-top:14px;opacity:.75;max-width:34ch}
       <div class="contact">
         <span class="eyebrow">Oder direkt schreiben</span>
         <div class="mailrow">
-          <code id="mail">hallo@wunderwerk-digital.com</code>
+          <a id="mail" href="mailto:kontakt@wunderwerk-digital.com">kontakt@wunderwerk-digital.com</a>
           <button type="button" id="copyMail">Kopieren</button>
         </div>
       </div>
@@ -626,7 +626,7 @@ footer .claim{margin-top:14px;opacity:.75;max-width:34ch}
         <li>Wunderwerk Digital GbR</li>
         <li>Vertreten durch: Benjamin Schaarschmidt, Nadja Schaarschmidt, Christine Tappert, Stefan Tappert</li>
         <li>Dorfstraße 11k · 14554 Seddiner See</li>
-        <li>E-Mail: hallo@wunderwerk-digital.com</li>
+        <li>E-Mail: <a href="mailto:kontakt@wunderwerk-digital.com">kontakt@wunderwerk-digital.com</a></li>
         <li>Datenschutzerklärung folgt</li>
       </ul>
     </div>
@@ -707,7 +707,7 @@ footer .claim{margin-top:14px;opacity:.75;max-width:34ch}
   });
 
   /* Ideen-Formular: öffnet das E-Mail-Programm mit vorausgefüllter Nachricht, kein Fremddienst */
-  var IDEA_TO="hallo@wunderwerk-digital.com";
+  var IDEA_TO="kontakt@wunderwerk-digital.com";
   var form=document.getElementById("ideaForm"), msg=document.getElementById("formMsg");
   form.addEventListener("submit",function(e){
     e.preventDefault(); msg.className="form-msg"; msg.textContent="";
